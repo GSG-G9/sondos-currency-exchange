@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Conversion from './Conversion'
 
 function Countries() {
 
@@ -42,6 +43,7 @@ function Countries() {
   }, [secondCountry])
 
   return (
+    <>
     <div className="countries">
       <div className="country1">
         <label>Enter your country<br></br>
@@ -62,6 +64,8 @@ function Countries() {
         <p>{secondCurrency}</p>
       </div>
     </div>
+    <Conversion firstCurrency={firstCurrency} secondCurrency={secondCurrency} />
+    </>
   )
 }
 
