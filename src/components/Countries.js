@@ -76,21 +76,20 @@ function Countries() {
     <>
     <div className="countries">
       <div className="country1">
-        <label>Enter your country<br></br>
+        <label>Enter your country</label><br></br>
           <input type="text"
           onChange={handleChangeFirstCountry}
           ></input>
-        </label>
-        { notFound1
-          ? <p>{notFound1}</p>
-          : firstCountry && 
-            <div>
-              {firstFlag && <img  class="flag" src={firstFlag} alt="country flag"></img>}
-              <p>{firstCurrency}</p>
-            </div>
-        }
-        
-        
+        <div className="flag-container">
+          { notFound1
+            ? <p>{notFound1}</p>
+            : firstCountry && 
+              <div >
+                {firstFlag && <img  class="flag" src={firstFlag} alt="country flag"></img>}
+                <p>{firstCurrency}</p>
+              </div>
+          }
+        </div>
       </div>
 
       <div className="country2">
@@ -99,14 +98,16 @@ function Countries() {
           onChange={handleChangeSecondCountry}
           ></input>
         </label>
-        { notFound2
-          ? <p>{notFound2}</p>
-          : secondCountry &&
-            <div>
-              {secondFlag && <img class="flag" src={secondFlag} alt="country flag"></img>}
-               <p>{secondCurrency}</p>
-            </div>
-        }
+        <div className="flag-container">
+          { notFound2
+            ? <p>{notFound2}</p>
+            : secondCountry &&
+              <div>
+                {secondFlag && <img class="flag" src={secondFlag} alt="country flag"></img>}
+                 <p>{secondCurrency}</p>
+              </div>
+          }
+        </div>
        
         
       </div>

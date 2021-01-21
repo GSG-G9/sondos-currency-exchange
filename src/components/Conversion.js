@@ -44,14 +44,14 @@ function Conversion(props) {
     return () => {
       isCancelled = true;
     }
-  }, [amount])
+  }, [amount,firstCurrency, secondCurrency])
 
   let basicConversion = `${amount}  ${firstCurrency} Equal ${conversionResult} ${secondCurrency}`;
   let basicRate = `1 ${firstCurrency} = ${(conversionResult/amount).toFixed(3)} ${secondCurrency}`;
   let inverseRate = `1 ${secondCurrency} = ${(amount/conversionResult).toFixed(3)} ${firstCurrency}`
   return (
     
-    <div>
+    <div className="conversion-container">
       <label> How much you need to exchange?
         <input type="text" onChange={handleChange}></input>
       </label>
@@ -62,7 +62,7 @@ function Conversion(props) {
           <p>{basicRate}</p>
           <p>{inverseRate}</p>
         </div>
-      :  <p>{notFound}</p>}
+      : !isEditing && <p>{notFound}</p>}
       
     </div>
   )
