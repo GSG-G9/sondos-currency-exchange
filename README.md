@@ -1,5 +1,7 @@
 # sondos-currency-exchange
 
+Please Visit the [Demo](https://reverent-visvesvaraya-8a2f2a.netlify.app/)
+
 ## About
 Currency-EXchange is a website to enable users to quickly doing their currency exchanging for any country they want to any another
 
