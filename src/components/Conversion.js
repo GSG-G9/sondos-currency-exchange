@@ -52,18 +52,20 @@ function Conversion(props) {
   return (
     
     <div className="conversion-container">
-      <label> How much you need to exchange?
-        <input type="text" onChange={handleChange}></input>
-      </label>
-      <button onClick={handleExchange}>Exchange</button>
+      <label> How much you need to exchange?</label><br></br>
+      <div>
+        <input className="input-country" type="text" onChange={handleChange}></input>
+        <button className="exchange-button" onClick={handleExchange}>Exchange</button>
+      </div>
+      <div className="conversion-result">
       {conversionResult
       ? !isEditing && <div>
-          <p>{basicConversion}</p>
-          <p>{basicRate}</p>
-          <p>{inverseRate}</p>
+          <p className="basic-conversion">{basicConversion}</p>
+          <p className="rate">{basicRate}</p>
+          <p className="rate">{inverseRate}</p>
         </div>
       : !isEditing && <p>{notFound}</p>}
-      
+      </div>
     </div>
   )
 }

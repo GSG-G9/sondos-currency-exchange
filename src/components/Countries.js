@@ -75,16 +75,16 @@ function Countries() {
   return (
     <>
     <div className="countries">
-      <div className="country1">
-        <label>Enter your country</label><br></br>
-          <input type="text"
+      <div className="country-item">
+        <label>Enter your country</label>
+          <input className="input-country" type="text"
           onChange={handleChangeFirstCountry}
           ></input>
-        <div className="flag-container">
+        <div className="result-container">
           { notFound1
             ? <p>{notFound1}</p>
             : firstCountry && 
-              <div >
+              <div className="flag-container">
                 {firstFlag && <img  class="flag" src={firstFlag} alt="country flag"></img>}
                 <p>{firstCurrency}</p>
               </div>
@@ -92,18 +92,18 @@ function Countries() {
         </div>
       </div>
 
-      <div className="country2">
-        <label>Enter country you need to exchange your currency to.<br></br>
-          <input type="text"
+      <div className="country-item">
+        <label>Enter country you need to exchange your currency to.</label>
+          <input className="input-country" type="text"
           onChange={handleChangeSecondCountry}
           ></input>
-        </label>
-        <div className="flag-container">
+        
+        <div className="result-container">
           { notFound2
             ? <p>{notFound2}</p>
             : secondCountry &&
-              <div>
-                {secondFlag && <img class="flag" src={secondFlag} alt="country flag"></img>}
+              <div className="flag-container">
+                {secondFlag &&<div className="flagg-container"> <img class="flag" src={secondFlag} alt="country flag"></img></div>}
                  <p>{secondCurrency}</p>
               </div>
           }

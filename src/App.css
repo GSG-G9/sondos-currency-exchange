@@ -1,10 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Signika';
+  font-size: 20px;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes rotateX {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo_link {
+  text-decoration: none;
+}
+.xchange_xletter {
+  color: #aa3a3a;
+  font-weight: bold;
+  font-size: 46px;
+  display: inline-block;
+  animation: rotateX 2s linear infinite;
+  transform: rotate(1deg);
+}
+.logo {
+  color: #fff;
+  font-size: 26px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,43 +40,90 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3f4441;
   height: 8vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0 40px;
 }
 
 .countries{
   display: flex;
-  justify-content: space-around;
-  margin-top: 10vh;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-left: 200px;
   
 }
 
-.flag-container{
-  display: block;
+.result-container{
+  display: flex;
   height: 200px;
-  width: 300px;
+  width: 20vw;
+}
+.flag-container{
+  display: flex;
+  justify-content: space-between;
+  width: 15vw;
+  color: #aa3a3a;
+  font-weight: bold;
 }
 
+.flagg-container{
+  
+}
 .flag{
   width: 150px;
   height: 100px;
 }
 
 .conversion-container{
-  margin-top: 5vh;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-country{
+  height: 5vh;
+  width: 20vw;
+  padding-left: 15px;
+  border-radius: 10px;
+  border: #c0bebe solid 1px;
+  outline: none;
+}
+
+.country-item{
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  width: 30vw;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+}
+
+.exchange-button{
+  height: 5vh;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #aa3a3a;
+  color: #fff;
+  width: 100px;
+}
+
+.basic-conversion{
+  font-size: 1.5em;
+  color: #aa3a3a;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+
+.rate{
+  margin-top: 8px;
+  color: #3b3b3b;
 }
