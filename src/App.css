@@ -27,12 +27,23 @@
 .countries{
   display: flex;
   justify-content: space-around;
+  margin-top: 10vh;
   
+}
+
+.flag-container{
+  display: block;
+  height: 200px;
+  width: 300px;
 }
 
 .flag{
   width: 150px;
   height: 100px;
+}
+
+.conversion-container{
+  margin-top: 5vh;
 }
 
 @keyframes App-logo-spin {
